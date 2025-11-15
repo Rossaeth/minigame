@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useMiniKit } from "@coinbase/onchainkit/minikit";
 import TriviaWeb3 from "../components/Game/TriviaWeb3";
-import styles from "./page.module.css";
+import styles from "../pages/page.module.css";
 import { ethers } from "ethers";
 
 export default function Home() {
