@@ -2,35 +2,26 @@ const ROOT_URL =
   process.env.NEXT_PUBLIC_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000');
 
-/**
- * MiniApp configuration object. Must follow the Farcaster MiniApp specification.
- *
- * @see {@link https://miniapps.farcaster.xyz/docs/guides/publishing}
- */
 export const minikitConfig = {
-  accountAssociation: {
-    header: "",
-    payload: "",
-    signature: ""
-  },
+  accountAssociation: { header: "", payload: "", signature: "" },
   miniapp: {
     version: "1",
-    name: "Cubey", 
-    subtitle: "Your AI Ad Companion", 
-    description: "Ads",
-    screenshotUrls: [`${ROOT_URL}/screenshot-portrait.png`],
-    iconUrl: `${ROOT_URL}/blue-icon.png`,
-    splashImageUrl: `${ROOT_URL}/blue-hero.png`,
-    splashBackgroundColor: "#000000",
+    name: "Web3 Trivia",
+    subtitle: "Fun Web3 Trivia Game",
+    description: "Test your Web3 knowledge with this mini trivia game!",
+    screenshotUrls: [`${ROOT_URL}/game/trivia-screenshot.png`],
+    iconUrl: `${ROOT_URL}/game/trivia-icon.png`,
+    splashImageUrl: `${ROOT_URL}/game/trivia-hero.png`,
+    splashBackgroundColor: "#1a1a1a",
     homeUrl: ROOT_URL,
     webhookUrl: `${ROOT_URL}/api/webhook`,
-    primaryCategory: "social",
-    tags: ["marketing", "ads", "quickstart", "waitlist"],
-    heroImageUrl: `${ROOT_URL}/blue-hero.png`, 
-    tagline: "",
-    ogTitle: "",
-    ogDescription: "",
-    ogImageUrl: `${ROOT_URL}/blue-hero.png`,
+    primaryCategory: "games",
+    tags: ["web3", "crypto", "trivia", "game"],
+    heroImageUrl: `${ROOT_URL}/game/trivia-hero.png`,
+    tagline: "Challenge your Web3 knowledge!",
+    ogTitle: "Web3 Trivia Challenge",
+    ogDescription: "Play the ultimate Web3 trivia game and share your score on Farcaster!",
+    ogImageUrl: `${ROOT_URL}/game/trivia-hero.png`,
   },
 } as const;
-
+ 
